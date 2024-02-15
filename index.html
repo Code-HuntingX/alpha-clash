@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Clash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .anton-font {
+            font-family: "Anton", sans-serif;
+        }
+
+        .poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <p>hello</p>
+
+<body class="text-white">
+    <main class="min-h-screen bg-[url(./images/background.png)] bg-no-repeat bg-center ">
+        <!-- home section  -->
+        <section class="hidden min-h-screen flex flex-col justify-center items-center">
+            <div class="flex flex-col items-center">
+                <h1 class="anton-font text-[170px]">ALPHABET CLASH</h1>
+                <p class="poppins text-xl pb-6">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button class="btn bg-white text-black hover:text-white">Play now</button>
+            </div>
+        </section>
+
+        <!-- screen section  -->
+        <section>
+            <!-- display screen  -->
+            <div class="flex justify-center pt-24">
+                <div
+                    class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB2] border-[20px] border-[#010313CC] rounded-2xl flex justify-center ">
+                    <div class="w-[396px]">
+                        <p class="text-center bg-[#2F2941] pb-3  rounded-b-xl">Don't watch keyboard while playing...
+                        </p>
+                        <h1 class="text-center font-semibold text-[128px] text-[black] uppercase">Y</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- keyboard  -->
+            <!-- life score line -->
+        </section>
+
+    </main>
 </body>
+
 </html>
