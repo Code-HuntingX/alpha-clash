@@ -52,19 +52,11 @@ function removeBg(elementId) {
 // }
 // document.addEventListener('keyup', eneterKey)
 
-function eneterKey() {
-    document.addEventListener('keyup', function (event) {
-        if (event.key === 'Enter') {
-            addClass('home-screen');
-            removeClass('game-screen');
-            return setAlphabet();
-        }
-    })
-}
+// -------------------------------------------------------
 
-
-// function gameOver(){
-//     const score = document.getElementById(elementId)
+// function gameOver(eventId){
+//     const score = document.getElementById(elementId);
+//     score.innerText = playGame();
 
 // }
 
@@ -72,7 +64,7 @@ function eneterKey() {
 function playGame() {
     const lifeId = document.getElementById('life');
     const scoreId = document.getElementById('score');
-    // const gameScore = document.getElementById('game-over')
+    const gameScore = document.getElementById('total-score')
     let score = 0;
     let life = 5;
     const letter = document.getElementById('letter');
@@ -91,9 +83,24 @@ function playGame() {
             if (life <= 0) {
                 addClass('game-screen');
                 removeClass('game-over');
-
+            removeBg(letter.innerText.toLowerCase());
+                gameScore.innerText = score;
+                score = 0;
+                life = 5;
+                
             }
         }
     })
 }
 
+function playAgain(){
+    const lifeId = document.getElementById('life');
+    const scoreId = document.getElementById('score');
+    addClass('game-over');
+    removeClass('game-screen');
+    setAlphabet();
+    lifeId.innerText = 5;
+    scoreId.innerText = 0;
+    
+    
+}
