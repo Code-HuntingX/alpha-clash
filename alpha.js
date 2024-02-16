@@ -88,6 +88,5 @@ function playAgain(){
     setAlphabet();
     lifeId.innerText = 5;
     scoreId.innerText = 0;
-    
-    
+
 }
