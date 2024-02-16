@@ -25,28 +25,24 @@ function setAlphabet() {
     const alphabet = randomAlphabet();
     const letter = document.getElementById('letter');
     letter.innerText = alphabet;
-    addRemoveBg(alphabet, alphabet)
+    addBg(alphabet);
     return letter;
 }
 
-// add or remove background of key 
-function addRemoveBg(elementId, elementId2) {
+// add background of key 
+function addBg(elementId) {
     const id = document.getElementById(elementId);
     id.classList.add('bg-green-600');
-    const id2 = document.getElementById(elementId);
-    id2.classList.remove('bg-green-600');
-
+}
+// remove background of key 
+function removeBg(elementId) {
+    const id = document.getElementById(elementId);
+    id.classList.remove('bg-green-600');
 }
 
 
 
-eneterKey();
-function homeScreen() {
-    addClass('home-screen');
-    removeClass('game-screen');
-    setAlphabet();
 
-}
 
 // function eneterKey(event){
 //     if(event.key==='Enter'){
@@ -66,14 +62,38 @@ function eneterKey() {
     })
 }
 
+
+// function gameOver(){
+//     const score = document.getElementById(elementId)
+
+// }
+
+
 function playGame() {
-    const letter = document.getElementById('letter')
+    const lifeId = document.getElementById('life');
+    const scoreId = document.getElementById('score');
+    // const gameScore = document.getElementById('game-over')
+    let score = 0;
+    let life = 5;
+    const letter = document.getElementById('letter');
     document.addEventListener('keyup', function (event) {
+
         if (event.key === letter.innerText.toLowerCase()) {
-            setAlphabet()
+            removeBg(letter.innerText.toLowerCase());
+            setAlphabet();
+            // scoreId.innerText = score = score + 1;
+            score = score + 1;
+            scoreId.innerText = score;
+        }
+        else {
+            life = life - 1;
+            lifeId.innerText = life;
+            if (life <= 0) {
+                addClass('game-screen');
+                removeClass('game-over');
+
+            }
         }
     })
 }
-
-playGame();
 
