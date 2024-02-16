@@ -44,21 +44,7 @@ function removeBg(elementId) {
 
 
 
-// function eneterKey(event){
-//     if(event.key==='Enter'){
-//         homeScreen()
-//     }
-
-// }
-// document.addEventListener('keyup', eneterKey)
-
-// -------------------------------------------------------
-
-// function gameOver(eventId){
-//     const score = document.getElementById(elementId);
-//     score.innerText = playGame();
-
-// }
+// play game section ----------------------->
 
 
 function playGame() {
@@ -90,6 +76,7 @@ function playGame() {
                 
             }
         }
+       
     })
 }
 
